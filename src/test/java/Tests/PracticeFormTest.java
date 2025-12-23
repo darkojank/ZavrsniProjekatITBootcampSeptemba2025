@@ -52,25 +52,14 @@ public class PracticeFormTest extends BaseTest {
         String city = "Delhi";
 
 
-
-
         forms_practiceForm.inputFirstName(firstName);
-
         forms_practiceForm.inputLastName(lastName);
-
         forms_practiceForm.inputEmail(email);
-
-
         forms_practiceForm.selectGender(gender);
         //asertacija za odabrani gender:
         forms_practiceForm.isGenderSelected(gender);
-
         forms_practiceForm.inputMobileNumber(phoneNumber);
-
-
         forms_practiceForm.inputDateOfBirth(dateOfBirth);
-
-
         forms_practiceForm.inputSubject(subjects);
         forms_practiceForm.inputSubject(subjects1);
         forms_practiceForm.inputSubject(subjects2);
@@ -85,16 +74,14 @@ public class PracticeFormTest extends BaseTest {
 
         forms_practiceForm.inputCurrentAddress(currentAddress);
 
-
         forms_practiceForm.uploadPicture("C:\\Users\\Sidras\\Desktop\\ProjektnaSlika.png");
         Assert.assertTrue(forms_practiceForm.uploadPicture.getAttribute("value").contains("ProjektnaSlika.png"));
-
 
         forms_practiceForm.selectState(state);
         forms_practiceForm.selectCity(city);
 
-
         forms_practiceForm.clickViaJS(forms_practiceForm.submitButton);
+
 
         String titleAfterSubmission = "Thanks for submitting the form";
         Assert.assertEquals(forms_practiceForm.modalHeader.getText(), titleAfterSubmission);
