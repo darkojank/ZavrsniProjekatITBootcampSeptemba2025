@@ -50,14 +50,6 @@ public class ModalDialogsTest extends BaseTest {
         Assert.assertEquals(alertsFrameWindowsModalDialogs.modalBodyText.getText(),expectedText);
         alertsFrameWindowsModalDialogs.closeSmallModalButton.click();
         wait.until(ExpectedConditions.invisibilityOf(alertsFrameWindowsModalDialogs.closeSmallModalButton));
-//        boolean isPresent = false;
-//        try{
-//            isPresent = alertsFrameWindowsModalDialogs.closeSmallModalButton.isDisplayed();
-//        } catch (Exception e) {
-//
-//        }
-//
-//        Assert.assertFalse(isPresent);
 
         Assert.assertTrue(alertsFrameWindowsModalDialogs.isSmallModalClosed());
 
@@ -82,16 +74,8 @@ public class ModalDialogsTest extends BaseTest {
         Assert.assertEquals(alertsFrameWindowsModalDialogs.modalBodyText.getText(), expectedText);
         Assert.assertTrue(alertsFrameWindowsModalDialogs.closeLargeModalButton.isDisplayed());
         alertsFrameWindowsModalDialogs.closeLargeModalButton.click();
+
         wait.until(ExpectedConditions.invisibilityOf(alertsFrameWindowsModalDialogs.closeLargeModalButton));
-//        Thread.sleep(500);
-//        boolean isPresent = false;
-//        try{
-//            isPresent = alertsFrameWindowsModalDialogs.closeLargeModalButton.isDisplayed();
-//        } catch (Exception e) {
-//
-//        }
-//
-//        Assert.assertFalse(isPresent);
         Assert.assertTrue(alertsFrameWindowsModalDialogs.isLargeModalClosed());
 
 

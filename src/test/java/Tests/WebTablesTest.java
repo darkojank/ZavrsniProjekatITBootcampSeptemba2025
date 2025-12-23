@@ -151,45 +151,6 @@ public class WebTablesTest extends BaseTest {
 
     }
 
-//    @Test
-//    public void userCanSearch() throws InterruptedException {
-//        webTablesPage.deleteAllRecords();
-//        int j = 0;
-//        for(int i = 0; i<excelReader.getLastRow("TestData"); i++) {
-//            String firstName = excelReader.getStringData("TestData", i+1, 0);
-//            String lastName = excelReader.getStringData("TestData", i+1, 1);
-//            String email = excelReader.getStringData("TestData", i+1,2);
-//            String age = String.valueOf(excelReader.getIntegerData("TestData", i+1, 3));
-//            String salary = String.valueOf(excelReader.getIntegerData("TestData", i+1, 4));
-//            String department = excelReader.getStringData("TestData", i+1, 5);
-//
-//            webTablesPage.addNewUserInformation(firstName, lastName, email, salary, department, age);
-//            Assert.assertEquals(firstName, webTablesPage.getGetCell().get(j).getText());
-//            Assert.assertEquals(lastName, webTablesPage.getGetCell().get(j + 1).getText());
-//            Assert.assertEquals(age, webTablesPage.getGetCell().get(j + 2).getText());
-//            Assert.assertEquals(email, webTablesPage.getGetCell().get(j + 3).getText());
-//            Assert.assertEquals(salary, webTablesPage.getGetCell().get(j + 4).getText());
-//            Assert.assertEquals(department, webTablesPage.getGetCell().get(j + 5).getText());
-//
-//            j = j + 7;
-//
-//        }
-//
-//        String searchText = "Kapoor";
-//        webTablesPage.inputSearchBox(searchText);
-//        Thread.sleep(1000);
-//        String actualName = webTablesPage.getGetCell().get(0).getText();
-//        String actualLastName = webTablesPage.getGetCell().get(1).getText();
-//
-//        Thread.sleep(1000);
-////        Assert.assertTrue(actualName.contains(searchText), actualName);
-//        Assert.assertTrue(actualLastName.contains(searchText), actualLastName);
-//
-//
-//
-//
-//
-//    }
     @Test(priority = 50)
     public void userCanSearch()  {
         webTablesPage.deleteAllRecords();

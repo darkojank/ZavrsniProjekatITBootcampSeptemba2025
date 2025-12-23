@@ -154,24 +154,24 @@ public class WebTablesPage extends BaseTest {
         clickOnSubmitButton();
     }
 
-    public void addSomeRecordsToTable(ExcelReader reader){
-        for(int i = 1; i<=reader.getLastRow("Project"); i++) {
-            clickOnAddButton();
-            String firstName = reader.getStringData("Project", i, 0);
-            String lastName = reader.getStringData("Project", i, 1);
-            String age = reader.getStringData("Project", i, 2);
-            String email = reader.getStringData("Project", i, 3);
-            String salary = reader.getStringData("Project", i, 4);
-            String department = reader.getStringData("Project", i, 5);
-            inputFirstName(firstName);
-            inputLastName(lastName);
-            inputEmail(email);
-            inputAge(age);
-            inputSalary(salary);
-            inputDepartment(department);
-            clickOnSubmitButton();
-        }
-    }
+//    public void addSomeRecordsToTable(ExcelReader reader){
+//        for(int i = 1; i<=reader.getLastRow("Project"); i++) {
+//            clickOnAddButton();
+//            String firstName = reader.getStringData("Project", i, 0);
+//            String lastName = reader.getStringData("Project", i, 1);
+//            String age = reader.getStringData("Project", i, 2);
+//            String email = reader.getStringData("Project", i, 3);
+//            String salary = reader.getStringData("Project", i, 4);
+//            String department = reader.getStringData("Project", i, 5);
+//            inputFirstName(firstName);
+//            inputLastName(lastName);
+//            inputEmail(email);
+//            inputAge(age);
+//            inputSalary(salary);
+//            inputDepartment(department);
+//            clickOnSubmitButton();
+//        }
+//    }
 
     // Metoda koja samo popunjava polja i klikće submit
     public void fillFormForEdit(String firstName, String lastName, String email, String salary, String department, String age) {

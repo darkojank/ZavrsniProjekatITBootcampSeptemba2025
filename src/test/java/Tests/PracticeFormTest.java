@@ -4,7 +4,7 @@ import Base.BaseTest;
 import Page.Forms_PracticeForm;
 import Page.HomePage;
 import Page.SideBar;
-import org.openqa.selenium.Keys;
+
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -55,21 +55,21 @@ public class PracticeFormTest extends BaseTest {
 
 
         forms_practiceForm.inputFirstName(firstName);
-//        Assert.assertEquals(forms_practiceForm.firstNameField.getAttribute("value"), firstName);
+
         forms_practiceForm.inputLastName(lastName);
-//        Assert.assertEquals(forms_practiceForm.lastNameField.getAttribute("value"), lastName);
+
         forms_practiceForm.inputEmail(email);
-//        Assert.assertEquals(forms_practiceForm.userEmailField.getAttribute("value"), email);
+
 
         forms_practiceForm.selectGender(gender);
         //asertacija za odabrani gender:
         forms_practiceForm.isGenderSelected(gender);
 
         forms_practiceForm.inputMobileNumber(phoneNumber);
-//        Assert.assertEquals(forms_practiceForm.userNumberField.getAttribute("value"), phoneNumber);
+
 
         forms_practiceForm.inputDateOfBirth(dateOfBirth);
-//        Assert.assertEquals(forms_practiceForm.dateOfBirthField.getAttribute("value"), dateOfBirth );
+
 
         forms_practiceForm.inputSubject(subjects);
         forms_practiceForm.inputSubject(subjects1);
@@ -84,7 +84,7 @@ public class PracticeFormTest extends BaseTest {
         Assert.assertTrue(forms_practiceForm.isHobbySelected(hobby1));
 
         forms_practiceForm.inputCurrentAddress(currentAddress);
-//        Assert.assertEquals(forms_practiceForm.assertCurrentAddress(), currentAddress );
+
 
         forms_practiceForm.uploadPicture("C:\\Users\\Sidras\\Desktop\\ProjektnaSlika.png");
         Assert.assertTrue(forms_practiceForm.uploadPicture.getAttribute("value").contains("ProjektnaSlika.png"));

@@ -168,16 +168,12 @@ public class Forms_PracticeForm extends BaseTest {
     }
 
     public void uploadPicture(String filePath) {
-        uploadPicture.sendKeys(filePath);  // pošalji putanju do fajla
+        uploadPicture.sendKeys(filePath);
     }
 
     public void inputCurrentAddress(String address) {
         currentAddressField.clear();
         currentAddressField.sendKeys(address);
-    }
-    // metoda za assertovanje adrese
-    public String assertCurrentAddress() {
-        return currentAddressField.getAttribute("value");
     }
 
     public void selectCity(String cityName) {
@@ -186,13 +182,8 @@ public class Forms_PracticeForm extends BaseTest {
         cityInput.sendKeys(Keys.ENTER);
     }
     public void selectState(String stateName) {
-        // Prvo koristimo tvoj JS klik da bismo bili sigurni da će se meni otvoriti
         clickViaJS(stateDropDown);
-
-        // Kucamo ime države
         stateInput.sendKeys(stateName);
-
-        // Potvrđujemo izbor
         stateInput.sendKeys(Keys.ENTER);
     }
 

@@ -55,9 +55,6 @@ public class Elements_TextBoxPage extends BaseTest {
 
     //--------------------------------
 
-    public void outputNameCheck(String outputResult) {
-    }
-
 
 
     public void inputFullName(String nameFull) {

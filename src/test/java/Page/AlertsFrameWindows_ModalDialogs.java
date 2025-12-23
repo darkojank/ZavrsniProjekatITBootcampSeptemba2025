@@ -24,17 +24,12 @@ public class AlertsFrameWindows_ModalDialogs extends BaseTest {
     @FindBy(id="example-modal-sizes-title-sm")
     public WebElement smallModalTitle;
 
-//    @FindBy(className = "modal-body")
-//    public WebElement smallModalText;
-
     @FindBy(id="example-modal-sizes-title-lg")
     public WebElement largeModalTitle;
 
     @FindBy(css = ".modal-content .modal-body")  //.modal-body je isti lokator za small i za large tekst, pa s' toga koristim samo jedan lokator za oba teksta
     public WebElement modalBodyText;
 
-//    @FindBy(className = "modal-body")
-//    public WebElement largeModalText;
 
     @FindBy(id = "closeLargeModal")
     public WebElement closeLargeModalButton;
