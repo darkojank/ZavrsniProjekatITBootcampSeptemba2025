@@ -188,7 +188,7 @@ public class WebTablesTest extends BaseTest {
                 break;
             }
         }
-        //searchTerm is message if test fall
+        //searchTerm je poruka ako test padne
         Assert.assertTrue(result, searchTerm );
 
 
