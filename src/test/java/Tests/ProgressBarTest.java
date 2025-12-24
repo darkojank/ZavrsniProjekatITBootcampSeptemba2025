@@ -44,6 +44,7 @@ public class ProgressBarTest extends BaseTest {
     public void progressBarCanBeReset() {
         widgetsProgressBar.clickOnStartStopButton();
         wait.until(ExpectedConditions.visibilityOf(widgetsProgressBar.successMessage));
+        Assert.assertEquals(widgetsProgressBar.progressBar.getText(), "100%");
         Assert.assertTrue(widgetsProgressBar.resetButton.isDisplayed());
         widgetsProgressBar.clickOnResetButton();
         Assert.assertTrue(widgetsProgressBar.startStopButton.isDisplayed());
