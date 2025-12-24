@@ -158,7 +158,7 @@ public class Forms_PracticeForm extends BaseTest {
         }
     }
 
-    // Metoda za proveru da li je hobij selektovan
+    // Metoda za proveru da li je hobi selektovan
     public boolean isHobbySelected(String hobby) {
         for (int i = 0; i < hobbiesLabels.size(); i++) {
             if (hobbiesLabels.get(i).getText().equalsIgnoreCase(hobby)) {
