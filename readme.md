@@ -13,8 +13,8 @@ ToolsQA is a website for testing purposes where the main goal is to test as many
 ## Installation
 * Open terminal in IDE and git clone the repository
   https://github.com/darkojank/Zavrsni-Projekat---ITBootcamp-septembar-2025.git
-* java version: 11
-* Apache Maven 4.0
+* java version: "25" 2025-09-16
+* Apache Maven 4.0.0
 ## Executing program
 Run all tests from terminal with:
 
