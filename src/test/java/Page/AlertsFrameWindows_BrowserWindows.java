@@ -20,6 +20,12 @@ public class AlertsFrameWindows_BrowserWindows extends BaseTest {
     @FindBy(id = "messageWindowButton")
     public WebElement newWindowMessage;
 
+    @FindBy(id = "sampleHeading")
+    public WebElement textFromWindow;
+
+    @FindBy(tagName = "body")
+    public WebElement bodyForWindowMessage;
+
     //-------------------------------
 
     public void clickOnNewTabButton() {
@@ -30,7 +36,13 @@ public class AlertsFrameWindows_BrowserWindows extends BaseTest {
         newWindowButton.click();
     }
 
-    public void clickOnNewWindowMessageButton() {
-        newWindowMessage.click();
+    // Prebacuje fokus WebDriver-a na novi prozor/tab koji nije glavni
+    public void switchToNewWindow(String mainWindowHandle) {
+        for (String windowHandle : driver.getWindowHandles()) {
+            if (!windowHandle.equals(mainWindowHandle)) {
+                driver.switchTo().window(windowHandle);
+                break;
+            }
+        }
     }
 }

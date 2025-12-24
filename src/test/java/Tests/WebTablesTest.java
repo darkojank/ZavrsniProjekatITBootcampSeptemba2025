@@ -43,6 +43,7 @@ public class WebTablesTest extends BaseTest {
 
     @Test(priority = 10)
     public void deleteAllRecordsFromTables() {
+        Assert.assertTrue(webTablesPage.getNumberOfRecords() > 0);
         int count = webTablesPage.getNumberOfRecords();
         for (int i = 0; i < count; i++) {
             webTablesPage.clickOnDeleteButton();
@@ -187,7 +188,7 @@ public class WebTablesTest extends BaseTest {
                 break;
             }
         }
-
+        //searchTerm is message if test fall
         Assert.assertTrue(result, searchTerm );
 
 

@@ -36,10 +36,10 @@ public class RadioButtonTest extends BaseTest {
         String expectedUrlElements = "https://demoqa.com/elements";
         Assert.assertEquals(driver.getCurrentUrl(),expectedUrlElements );
         sideBar.clickOnSideBarCard("Radio Button");
-        String expectedUrlModalDialogs = "https://demoqa.com/radio-button";
-        Assert.assertEquals(driver.getCurrentUrl(), expectedUrlModalDialogs);
-        Assert.assertFalse(elements_radioButton.yesRadioButton.isSelected());
-        Assert.assertFalse(elements_radioButton.impressiveRadioButton.isSelected());
+        String expectedUrlRadioButton = "https://demoqa.com/radio-button";
+        Assert.assertEquals(driver.getCurrentUrl(), expectedUrlRadioButton);
+        Assert.assertFalse(elements_radioButton.yesRadioSelect.isSelected());
+        Assert.assertFalse(elements_radioButton.impressiveSelect.isSelected());
         Assert.assertFalse(elements_radioButton.noRadioButton.isEnabled());
 
 
@@ -48,6 +48,7 @@ public class RadioButtonTest extends BaseTest {
 
         String expectResultForYes = "Yes";
         Assert.assertTrue(elements_radioButton.resultText().contains(expectResultForYes));
+        Assert.assertTrue(elements_radioButton.yesRadioSelect.isSelected());
 
 
     }
@@ -58,18 +59,18 @@ public class RadioButtonTest extends BaseTest {
         String expectedUrlElements = "https://demoqa.com/elements";
         Assert.assertEquals(driver.getCurrentUrl(),expectedUrlElements );
         sideBar.clickOnSideBarCard("Radio Button");
-        String expectedUrlModalDialogs = "https://demoqa.com/radio-button";
-        Assert.assertEquals(driver.getCurrentUrl(), expectedUrlModalDialogs);
-        Assert.assertFalse(elements_radioButton.yesRadioButton.isSelected());
-        Assert.assertFalse(elements_radioButton.impressiveRadioButton.isSelected());
-        Assert.assertFalse(elements_radioButton.noRadioButton.isSelected());
+        String expectedUrlRadioButton = "https://demoqa.com/radio-button";
+        Assert.assertEquals(driver.getCurrentUrl(), expectedUrlRadioButton);
+        Assert.assertFalse(elements_radioButton.yesRadioSelect.isSelected());
+        Assert.assertFalse(elements_radioButton.impressiveSelect.isSelected());
+        Assert.assertFalse(elements_radioButton.noRadioButton.isEnabled());
 
         Assert.assertTrue(elements_radioButton.impressiveRadioButton.isDisplayed());
         elements_radioButton.clickOnImpressiveRadio();
 
         String expectedResultForImpressive = "Impressive";
         Assert.assertTrue(elements_radioButton.resultText().contains(expectedResultForImpressive));
-
+        Assert.assertTrue(elements_radioButton.impressiveSelect.isSelected());
 
     }
 
@@ -79,22 +80,23 @@ public class RadioButtonTest extends BaseTest {
         String expectedUrlElements = "https://demoqa.com/elements";
         Assert.assertEquals(driver.getCurrentUrl(),expectedUrlElements );
         sideBar.clickOnSideBarCard("Radio Button");
-        String expectedUrlModalDialogs = "https://demoqa.com/radio-button";
-        Assert.assertEquals(driver.getCurrentUrl(), expectedUrlModalDialogs);
-        Assert.assertFalse(elements_radioButton.yesRadioButton.isSelected());
-        Assert.assertFalse(elements_radioButton.impressiveRadioButton.isSelected());
+        String expectedUrlRadioButton = "https://demoqa.com/radio-button";
+        Assert.assertEquals(driver.getCurrentUrl(), expectedUrlRadioButton);
+        Assert.assertFalse(elements_radioButton.yesRadioSelect.isSelected());
+        Assert.assertFalse(elements_radioButton.impressiveSelect.isSelected());
         Assert.assertFalse(elements_radioButton.noRadioButton.isEnabled());
 
+
+        Assert.assertTrue(elements_radioButton.noRadioSelect.isDisplayed());
         Assert.assertTrue(elements_radioButton.noRadioButtonIsDisabled());
+        Assert.assertFalse(elements_radioButton.noRadioButton.isSelected());
+
 
     }
-
-
 
     @AfterMethod
     public void clearAllCookies() {
         driver.manage().deleteAllCookies();
-        driver.navigate().refresh();
         driver.close();
     }
 

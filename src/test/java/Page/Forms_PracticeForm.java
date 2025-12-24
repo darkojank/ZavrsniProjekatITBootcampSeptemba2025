@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.io.File;
 import java.util.List;
 
 public class Forms_PracticeForm extends BaseTest {
@@ -185,6 +186,15 @@ public class Forms_PracticeForm extends BaseTest {
         clickViaJS(stateDropDown);
         stateInput.sendKeys(stateName);
         stateInput.sendKeys(Keys.ENTER);
+    }
+    // metoda sa kojom uploadujemo sliku
+    public void uploadPicture1(String relativePath) {
+        // Pretvori relativnu putanju u apsolutnu
+        File file = new File(relativePath);
+        String absolutePath = file.getAbsolutePath();
+
+        // Pošalji apsolutnu putanju u input
+        uploadPicture.sendKeys(absolutePath);
     }
 
 

@@ -68,7 +68,7 @@ public class AlertsTest extends BaseTest {
         alert.sendKeys(inputText);
         alert.accept();
         wait.until(ExpectedConditions.visibilityOf(alertsFrameWindowsAlerts.successMessage));
-        Assert.assertEquals(alertsFrameWindowsAlerts.successMessage.getText(), "You entered " + inputText);
+        Assert.assertEquals(alertsFrameWindowsAlerts.successMessage.getText(),  inputText);
     }
 
         @AfterMethod

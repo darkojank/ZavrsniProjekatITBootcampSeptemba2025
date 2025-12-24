@@ -99,9 +99,9 @@ public class TextBoxTest extends BaseTest {
             elements_textBoxPage.inputPermanentAddress(permanentAddress);
             elements_textBoxPage.clickOnSubmitButton();
 
-            Assert.assertTrue(elements_textBoxPage.isEmailFieldInvalid(), invalidEmails[i]);
+            Assert.assertTrue(elements_textBoxPage.isEmailInvalid(), invalidEmails[i]);
 
-            Assert.assertFalse(elements_textBoxPage.isOutputEmailPresent(), invalidEmails[i]);
+            Assert.assertFalse(elements_textBoxPage.isOutputSectionDisplayed(), invalidEmails[i]);
 
             driver.navigate().refresh();
         }

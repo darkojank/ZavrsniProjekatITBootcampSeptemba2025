@@ -91,11 +91,11 @@ public class Elements_TextBoxPage extends BaseTest {
         return false;
     }
 
-    public boolean isEmailFieldInvalid() {
+    public boolean isEmailInvalid() {
         return email.getAttribute("class").contains("field-error");
     }
 
-    public boolean isOutputEmailPresent() {
+    public boolean isOutputSectionDisplayed() {
         return !driver.findElements(By.id("email")).isEmpty();
     }
 

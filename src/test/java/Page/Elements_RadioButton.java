@@ -13,12 +13,21 @@ public class Elements_RadioButton extends BaseTest {
 
     @FindBy(css = "label[for='yesRadio']")
     public WebElement yesRadioButton;
+    //select check id
+    @FindBy(id = "yesRadio")
+    public WebElement yesRadioSelect;
 
     @FindBy(css = "label[for='impressiveRadio']")
     public WebElement impressiveRadioButton;
+    //select check id
+    @FindBy(id = "impressiveRadio")
+    public WebElement impressiveSelect;
 
     @FindBy(id = "noRadio")
     public WebElement noRadioButton;
+
+    @FindBy(css = "label[for='noRadio']")
+    public WebElement noRadioSelect;
 
     @FindBy(css = "p.mt-3")
     public WebElement textResult;

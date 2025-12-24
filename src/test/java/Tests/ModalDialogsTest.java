@@ -32,7 +32,7 @@ public class ModalDialogsTest extends BaseTest {
     }
 
     @Test(priority = 10)
-    public void smallModalTest() throws InterruptedException {
+    public void smallModalTest()  {
         homePage.clickOnhomePageCardName("Alerts, Frame & Windows");
         String expectedUrlElements = "https://demoqa.com/alertsWindows";
         Assert.assertEquals(driver.getCurrentUrl(),expectedUrlElements );
@@ -58,7 +58,7 @@ public class ModalDialogsTest extends BaseTest {
     }
 
     @Test(priority = 20)
-    public void largeModalTest() throws InterruptedException {
+    public void largeModalTest()  {
         homePage.clickOnhomePageCardName("Alerts, Frame & Windows");
         String expectedUrlElements = "https://demoqa.com/alertsWindows";
         Assert.assertEquals(driver.getCurrentUrl(),expectedUrlElements );

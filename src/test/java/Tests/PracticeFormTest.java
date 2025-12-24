@@ -74,7 +74,7 @@ public class PracticeFormTest extends BaseTest {
 
         forms_practiceForm.inputCurrentAddress(currentAddress);
 
-        forms_practiceForm.uploadPicture("C:\\Users\\Sidras\\Desktop\\ProjektnaSlika.png");
+        forms_practiceForm.uploadPicture1("src/main/resources/ProjectImage/ProjektnaSlika.png");
         Assert.assertTrue(forms_practiceForm.uploadPicture.getAttribute("value").contains("ProjektnaSlika.png"));
 
         forms_practiceForm.selectState(state);
