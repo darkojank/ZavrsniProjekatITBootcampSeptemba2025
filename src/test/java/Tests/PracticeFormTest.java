@@ -60,6 +60,7 @@ public class PracticeFormTest extends BaseTest {
         forms_practiceForm.isGenderSelected(gender);
         forms_practiceForm.inputMobileNumber(phoneNumber);
         forms_practiceForm.inputDateOfBirth(dateOfBirth);
+
         forms_practiceForm.inputSubject(subjects);
         forms_practiceForm.inputSubject(subjects1);
         forms_practiceForm.inputSubject(subjects2);
@@ -73,7 +74,6 @@ public class PracticeFormTest extends BaseTest {
         Assert.assertTrue(forms_practiceForm.isHobbySelected(hobby1));
 
         forms_practiceForm.inputCurrentAddress(currentAddress);
-
         forms_practiceForm.uploadPicture1("src/main/resources/ProjectImage/ProjektnaSlika.png");
         Assert.assertTrue(forms_practiceForm.uploadPicture.getAttribute("value").contains("ProjektnaSlika.png"));
 
