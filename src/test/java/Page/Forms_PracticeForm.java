@@ -152,7 +152,7 @@ public class Forms_PracticeForm extends BaseTest {
     public void selectHobby(String hobby) {
         for (int i = 0; i < hobbiesLabels.size(); i++) {
             if (hobbiesLabels.get(i).getText().equalsIgnoreCase(hobby)) {
-                hobbiesLabels.get(i).click();  // klik na label
+                hobbiesLabels.get(i).click();
                 break;
             }
         }

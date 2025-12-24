@@ -81,8 +81,9 @@ public class TextBoxTest extends BaseTest {
 
     @Test(priority = 30)
     public void userCantSubmitInvalidEmails() {
-
         homePage.clickOnhomePageCardName("Elements");
+        String expectedUrlElements = "https://demoqa.com/elements";
+        Assert.assertEquals(driver.getCurrentUrl(),expectedUrlElements );
         sideBar.clickOnSideBarCard("Text Box");
 
         String fullName = "Petar Petrovic";

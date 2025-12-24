@@ -35,7 +35,7 @@ public class AlertsTest extends BaseTest {
     }
 
     @Test(priority = 10)
-    public void userCanOpenAlertWindow(){ //validateAlertWindowCanBeOpen
+    public void userCanOpenAlertWindow(){
         alertsFrameWindowsAlerts.clickOnAlertButton();
         String alertText = alertText();
         Assert.assertEquals(alertText,"You clicked a button");
@@ -43,7 +43,7 @@ public class AlertsTest extends BaseTest {
     }
 
     @Test(priority = 20)
-    public void userCanOpenTimerAlertWindow() {//validateTimerAlertWindowCanBeOpen
+    public void userCanOpenTimerAlertWindow() {
         alertsFrameWindowsAlerts.clickOnTimerAlertButton();
         String alertText = alertText();
         Assert.assertEquals(alertText, "This alert appeared after 5 seconds");
@@ -60,7 +60,7 @@ public class AlertsTest extends BaseTest {
     }
 
     @Test(priority = 40)
-    public void userCanOpenPromptWindow(){//validatePromptWindowCanBeOpen
+    public void userCanOpenPromptWindow(){
         alertsFrameWindowsAlerts.clickOnPromptButton();
         wait.until(ExpectedConditions.alertIsPresent());
         Alert alert = driver.switchTo().alert();
